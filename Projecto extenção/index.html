@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tecnologias de Plataformas</title>
+  <style>
+    body {
+      background-color: #c0d8f0;
+      font-family: Arial, sans-serif;
+      
+    }
+    
+    h1 {
+      text-align: center;
+      color: blue;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 100px;
+      color: rgba(0, 0, 0, 0.8);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      margin-top: 50px
+    }
+    
+    h2 {
+      text-align: center;
+      text-transform:;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 35px;
+      color: rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      
+    }
+    
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #4285f4;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      width: 200px; /* Defina a largura desejada para os botões */
+  margin: 10px;
+     
+   
+    }
+    
+    .button:hover {
+      background-color: #1a73e8;
+    }
+    
+    .photo-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .photo {
+      display: none;
+    }
+    
+    .photo.active {
+      display: block;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    function showPhoto(photoId) {
+      var photos = document.getElementsByClassName('photo');
+      for (var i = 0; i < photos.length; i++) {
+        photos[i].classList.remove('active');
+      }
+      var selectedPhoto = document.getElementById(photoId);
+      selectedPhoto.classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <h1>Tecnologias usadas para a criação de plataformas</h1>
+  <h2>Clique em um dos botões para obter informações sobre as tecnologias usadas na Plataforma que escolheres</h2>
+  
+  <div>
+    
+    <button class="button" onclick="showPhoto('photo1')">online.explicador.co.mz</button>
+    <button class="button" onclick="showPhoto('photo2')">bazara.co.mz</button>
+    <button class="button" onclick="showPhoto('photo3')">nhatosolution.co.mz</button>
+    <button class="button" onclick="showPhoto('photo4')">www.w3schools.com</button>
+    <button class="button" onclick="showPhoto('photo5')">laravel.com</button>
+  </div>
+  
+  <div class="photo-container">
+    <img id="photo1" class="photo active" src="explicador.jpg" alt="Foto 1">
+    <img id="photo2" class="photo" src="bazara.jpg" alt="Foto 2">
+    <img id="photo3" class="photo" src="nhato.jpg" alt="Foto 3">
+    <img id="photo4" class="photo" src="w3shool.jpg" alt="Foto 4">
+    <img id="photo5" class="photo" src="laravel.jpg" alt="Foto 5">
+  </div>
+
+  <footer>
+    <p>&copy; 2023. Edson Rufasse. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
